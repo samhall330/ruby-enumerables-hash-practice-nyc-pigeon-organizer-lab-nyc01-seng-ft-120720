@@ -1,20 +1,21 @@
 require 'pry'
 
 def nyc_pigeon_organizer(data)
-  data.each_with_object({}) do |(key, value), organized_array|
-    #binding.pry
+  organized_data = data.each_with_object({}) do |(key, value), organized_array|
+  
     value.each do |inner_key, names|
-      #binding.pry
+    
       names.each do |name|
-        #binding.pry
+      
         if !organized_array[name]
           organized_array[name] = {}
-          #binding.pry
+        
         end
         if !organized_array[name][key]
           organized_array[name][key] =[]
-          binding.pry
+          #binding.pry
         end
+        organized_array[name][key].push(inner_key)
       end
     end
   organized_array
