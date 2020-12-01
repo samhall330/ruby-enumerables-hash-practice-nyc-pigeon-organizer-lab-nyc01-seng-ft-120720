@@ -9,6 +9,7 @@ def nyc_pigeon_organizer(data)
         binding.pry
         if !final_array[name]
           final_array[name] = {}
+        end
       end
     end
   organized_array
