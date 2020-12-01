@@ -13,6 +13,8 @@ def nyc_pigeon_organizer(data)
         end
         if !organized_array[name][key]
           organized_array[name][key] =[]
+          binding.pry
+        end
       end
     end
   organized_array
